@@ -2,29 +2,32 @@ package flight.reservation.System;
 
 import java.util.ArrayList;
 
-public class Ticket {
-    private String pnrNumber;
-    private String departureLocation;
-    private  String destination;
-    private  Flight flight;
-    private Passenger passenger;
-    static enum Status{
+public abstract class Ticket {
+    protected String ticketName;
+    protected String pnrNumber;
+    protected String departureLocation;
+    protected String destination;
+    protected Flight flight;
+    protected Passenger passenger;
+    enum Status{
         CANCELLED,CONFIRMED
    }
+    protected abstract void printTicketDetails();
 
-
-    private Status status;
+    protected Status status;
 
     public void cancelTicket(){
         this.status = Status.CANCELLED;
     }
-    Ticket(String pnrNumber,String departureLocation,String destination,Flight flight,Passenger passenger,Status status){
+
+    Ticket(String pnrNumber,String departureLocation,String destination,Flight flight,Passenger passenger,Status status,String ticketName){
         this.pnrNumber = pnrNumber;
         this.departureLocation=departureLocation;
         this.destination =destination;
         this.flight = flight;
         this.passenger = passenger;
         this.status = status;
+        this.ticketName = ticketName;
     }
 
     public Flight getFlight() {
@@ -51,4 +54,7 @@ public class Ticket {
         return status;
     }
 
+    public String getTicketName() {
+        return ticketName;
+    }
 }
