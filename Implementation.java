@@ -15,7 +15,18 @@ public class Implementation {
     public static void main(String[] args) {
 
         Flight f1 = new Flight("F1",100,40,60);
-        Passenger p1 = new Passenger("Devaki","devaki@gmail.com",1234556780,"Secunderabad","Hyderabad","Telangana");
+
+        System.out.println(f1.getFlightNumber());
+
+        System.out.println(f1.getCapacity());
+
+        System.out.println(f1.getNumOfSeatBooked());
+
+        System.out.println(f1.getVacantSeats());
+
+
+
+        /*Passenger p1 = new Passenger("Devaki","devaki@gmail.com",1234556780,"Secunderabad","Hyderabad","Telangana");
         Passenger p2 = new Passenger("Roy","roy.ac.in",123456870,"LBNagar","banglore","karnataka");
         RegularTicket ticket = new RegularTicket(generatePNR(),"Mumbai","United States",f1,p2,Ticket.Status.CONFIRMED);
         ticket.cancelTicket();
@@ -29,7 +40,7 @@ public class Implementation {
         TouristTicket ticket1 = new TouristTicket(generatePNR(),"Mumbai","United States" , f1,p1,Ticket.Status.CONFIRMED,hotelAddress,list);
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("TICKET2");
-        ticket1.printDetails();
+        ticket1.printDetails();*/
 
 
 
